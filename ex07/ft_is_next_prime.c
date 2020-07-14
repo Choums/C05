@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_is_next_prime.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 18:36:54 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/14 18:42:59 by caidel           ###   ########.fr       */
+/*   Created: 2020/07/14 21:30:53 by caidel            #+#    #+#             */
+/*   Updated: 2020/07/14 21:54:08 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+int	ft_is_prime(int nb)
 {
 	int i;
 
-	i = 1;
-	if (nb <= 0)
+	if (nb == 0 || nb == 1)
 		return (0);
-	while (i * i < nb && i < 46340)
+	i = 2;
+	while (i < nb)
 	{
+		if ((nb % i) == 0)
+			return (0);
 		i++;
 	}
-	if (i * i == nb)
-		return (i);
+	return (1);
+}
+
+int	ft_is_next_prime(int nb)
+{
+	if (ft_is_prime(nb))
+		return (nb);
+	else
+	{
+		while (1)
+		{
+			if (ft_is_prime(nb))
+				return (nb);
+			nb++;
+		}
+	}
 	return (0);
 }
