@@ -6,7 +6,7 @@
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 21:30:53 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/14 21:54:08 by caidel           ###   ########.fr       */
+/*   Updated: 2020/07/15 22:45:59 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_is_prime(int nb)
 {
 	int i;
 
-	if (nb == 0 || nb == 1)
+	if (nb <= 1)
 		return (0);
 	i = 2;
 	while (i < nb)
@@ -26,7 +26,7 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
-int	ft_is_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
 	if (ft_is_prime(nb))
 		return (nb);
