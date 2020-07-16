@@ -6,7 +6,7 @@
 /*   By: caidel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:40:32 by caidel            #+#    #+#             */
-/*   Updated: 2020/07/16 12:12:02 by caidel           ###   ########.fr       */
+/*   Updated: 2020/07/16 15:30:14 by caidel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_iterative_power(int nb, int power)
 
 	if (power < 0)
 		return (0);
-	if ((!nb && !power) || power == 1)
+	if ((!nb && !power) || power == 0)
 		return (1);
 	i = 0;
 	res = 1;
